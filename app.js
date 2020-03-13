@@ -45,15 +45,21 @@ function showDown(userChoice, compChoice) {
 }
 function userTie(){
   document.getElementById("score").innerHTML = 'YOU TIE!!!!'
+  showScores()
 }
-function userWin(userScore, compScore){
-  userScore += 1
+function userWin(){
+  // debugger
+  userScore++
+  // debugger
   document.getElementById("score").innerHTML = 'YOU WIN!!!'
+  showScores()
 }
-function userLose(userScore, compScore){
-  compScore += 1
+function userLose(){
+  compScore++
   document.getElementById("score").innerHTML = 'YOU LOSE!!!'
+  showScores()
 }
-function showScores(userScore, compScore){
+
+function showScores(){
   document.getElementById("totals").innerHTML = `Your score: ${userScore} Computer score: ${compScore}`
 }
