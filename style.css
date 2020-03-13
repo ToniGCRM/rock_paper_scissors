@@ -1,0 +1,24 @@
+.pageWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+}
+
+.box {
+  width: 400px;
+  height: 400px;
+}
+
+h1 { 
+  font-family: fantasy;
+  text-align: center;
+}
+.scorebox {
+  font-family: fantasy;
+  font-size: 2em;
+  text-align: center;
+}
+body {
+  background-color: #F1F1D4;
+}
