@@ -19,24 +19,24 @@ showDown(userChoice, compChoice)
 
 function showDown(userChoice, compChoice) {
   if (userChoice === compChoice){userTie}
-  else if(userChoice === 1 && compChoice === 3){userWin}
-  else if(userChoice === 2 && compChoice === 1){userWin}
-  else if(userChoice === 3 && compChoice === 2){userWin}
+  else if(userChoice === 'rock' && compChoice === 'scissors'){userWin}
+  else if(userChoice === 'paper' && compChoice === 'rock'){userWin}
+  else if(userChoice === 'scissors' && compChoice === 'paper'){userWin}
   else {userLose}
 }
 
-function userTie{
+function userTie(){
   document.getElementById("score").innerHTML = 'YOU TIE!!!!'
 }
-function userWin{
+function userWin(userScore, compScore){
   userScore += 1
   document.getElementById("score").innerHTML = 'YOU WIN!!!'
 }
-function userLose{
+function userLose(userScore, compScore){
   compScore += 1
   document.getElementById("score").innerHTML = 'YOU LOSE!!!'
 }
 
-function showScores{
+function showScores(userScore, compScore){
   document.getElementById("totals").innerHTML = `Your score: ${userScore} Computer score: ${compScore}`
 }
